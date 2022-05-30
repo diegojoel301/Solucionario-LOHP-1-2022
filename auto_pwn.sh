@@ -1,4 +1,5 @@
 #!/bin/bash
+# pdta cambia las ip's 
 
 usuario_valido=""
 contrasenia_valida=""
