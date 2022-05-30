@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# pdta cambia la ip 
 ip="192.168.146"
 
 for i in $(seq 1 255); do
